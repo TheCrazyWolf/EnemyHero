@@ -31,15 +31,24 @@ namespace GameHeroEnemy
 
             if (_enemy.isDeath())
                 return;
-            
+
+            Result2();
             _enemy.GetDamage(_hero.ToDamage());
             _hero.GetDamage(_enemy.ToDamage());
             rounds++;
 
             Round();
+            
         }
 
         public string Result() => $"Игрок Enemy {_enemy.GetInfoHP()}, Убит:{_enemy.isDeath()}. Игрок Hero {_hero.GetInfoHP()}, Убит:{_hero.isDeath()}. Раундов {rounds}";
+
+
+        public void Result2()
+        {
+            WriteLine($"Игрок Enemy {_enemy.GetInfoHP()}, Убит:{_enemy.isDeath()}. Игрок Hero {_hero.GetInfoHP()}, Убит:{_hero.isDeath()}. Раундов {rounds}");
+        }
+            
 
     }
 }

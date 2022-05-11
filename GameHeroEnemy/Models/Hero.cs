@@ -14,7 +14,7 @@ namespace GameHeroEnemy.Models
 
         public Hero()
         {
-            _hp = 100; _maxDamage = 4; Death = false;
+            _hp = 100; _maxDamage = 10; Death = false;
         }
 
         public int GetInfoHP()
